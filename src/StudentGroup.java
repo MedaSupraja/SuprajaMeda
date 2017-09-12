@@ -26,12 +26,28 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+		
+		
 		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		 int id;
+		 String fullName;
+		 Date day;
+		 double avg;
+		 SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy");
+		 id=sc.nextInt();
+		 fullName=sc.next();
+		 day=sc.hasNext();
+		 avg=sc.nextDouble();
+		 s[i]=setId(id);
+		 s[i]=setFullName(fullNmae);
+		 s[i]=setBirthDate(day);
+		 s[i]=setAvgMark(avg);
+			 
 	}
 
 	@Override
@@ -43,6 +59,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		
 	}
 
 	@Override
@@ -63,11 +80,20 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		    checkIndex(index);
+		    for (int i = index; i < size() - 1; i++)
+		      s[i] = s[i + 1];
+		    
+		    s--;
+		  
+	
 	}
 
 	@Override
 	public void remove(Student student) {
+		
 		// Add your implementation here
+		students.remove(student)
 	}
 
 	@Override
@@ -78,6 +104,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		 Node temp = head;
+		  Node temp2 =null;
+		  // Check for underflow  
+		  if(temp.getNext()==null){
+		  
+		   return;
 	}
 
 	@Override
@@ -92,6 +124,13 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
+		 int out, i;
+
+	      for(out=n-1; out>0; out--) 
+	         for(ii=0; i<out; in++)     // "in < out" better than "in < nElems-1"   
+	            if (a[i] > a[i+1])     // out of order?
+	               swap(i, i+1);       // swap them
+
 		// Add your implementation here
 	}
 
