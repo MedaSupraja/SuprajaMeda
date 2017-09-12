@@ -15,7 +15,10 @@ public class Main {
 		 {
 			 sg.setStudents(s[i]);
 		 }
-		 sg.getStudents();
+		 //sg.getStudents();
+		 sg.remove(i);
+		sg. removeFromElement(Student[]);
+		 
 		
 		
 	}
